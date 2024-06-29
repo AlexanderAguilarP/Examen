@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Información del Cliente</title>
+    <link rel="stylesheet" href="examen1.css">
+    <script src="examen1.js"></script>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Formulario de Información del Cliente</h2>
+    <form id="clienteForm" onsubmit="return validarFormulario()">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Seleccionar país...</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="Brasil">Brasil</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Intereses:</label><br>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interes" value="Deportes"> Deportes</label>
+                <label><input type="checkbox" name="interes" value="Música"> Música</label>
+                <label><input type="checkbox" name="interes" value="Lectura"> Lectura</label>
+                <label><input type="checkbox" name="interes" value="Viajes"> Viajes</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Género:</label><br>
+            <div class="checkbox-group">
+                <label><input type="radio" name="genero" value="Masculino" required> Masculino</label>
+                <label><input type="radio" name="genero" value="Femenino" required> Femenino</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="ci">Escaneo de CI (Formato PDF):</label>
+            <input type="file" id="ci" name="ci" accept=".pdf" required>
+            <p class="form-helper">Formato aceptado: PDF</p>
+        </div>
+
+        <div class="form-group">
+            <label for="discapacidades">Discapacidades:</label><br>
+            <textarea id="discapacidades" name="discapacidades" rows="4" cols="40" placeholder="Escribe las discapacidades aquí"></textarea>
+            <p class="form-helper disabled">Guía: Asegúrate de especificar cualquier discapacidad para recibir asistencia adecuada.</p>
+        </div>
+
+        <button type="submit">Enviar Información</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>
